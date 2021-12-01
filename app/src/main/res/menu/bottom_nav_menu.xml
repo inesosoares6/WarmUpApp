@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:title="@string/home"
+        android:icon="@drawable/ic_home_foreground"/>
+    <item
+        android:id="@+id/warmUp"
+        android:title="@string/warm_up"
+        android:icon="@drawable/ic_warmup_foreground"/>
+
+    <item
+        android:id="@+id/all"
+        android:title="@string/all"
+        android:icon="@drawable/ic_all_foreground"/>
+
+</menu>

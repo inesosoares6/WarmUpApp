@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "466664474921",
+    "project_id": "warm-up-app",
+    "storage_bucket": "warm-up-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:466664474921:android:913354a5167e80fe984f38",
+        "android_client_info": {
+          "package_name": "pt.atp.warmupapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "466664474921-8lujdub30sn2c6p87kdkkt1vllt4rd5f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pt.atp.warmupapp",
+            "certificate_hash": "83dfbc772767fc6cd99bc86e2498ef811e942388"
+          }
+        },
+        {
+          "client_id": "466664474921-g2r7r56q4a689bnbd6lo5hr8gf7fp1qk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFgNyjGXGLWyZdmu2Lfkf6sMYTc0zWpuI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "466664474921-g2r7r56q4a689bnbd6lo5hr8gf7fp1qk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
