@@ -10,62 +10,58 @@
     <TextView
         android:id="@+id/warm_up_name"
         android:text="@string/warm_up_name"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        android:textSize="17sp"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        tools:ignore="MissingConstraints"
-        android:layout_marginStart="20dp" />
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp" />
 
     <TextView
         android:id="@+id/warm_up_type"
         android:text="@string/warm_up_type"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
         android:layout_marginTop="30dp"
-        android:textSize="17sp"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/warm_up_name"
-        app:layout_constraintHorizontal_bias="0.0"
-        tools:ignore="MissingConstraints"
-        android:layout_marginStart="20dp" />
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp" />
 
     <TextView
         android:id="@+id/warm_up_time"
         android:text="@string/warm_up_time"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
         android:layout_marginTop="30dp"
-        android:textSize="17sp"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/warm_up_type"
-        app:layout_constraintHorizontal_bias="0.0"
-        tools:ignore="MissingConstraints"
-        android:layout_marginStart="20dp" />
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp" />
 
     <TextView
         android:id="@+id/warm_up_exercises"
         android:text="@string/warm_up_exercises"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
         android:layout_marginTop="30dp"
-        android:textSize="17sp"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/warm_up_time"
-        app:layout_constraintHorizontal_bias="0.0"
-        tools:ignore="MissingConstraints"
-        android:layout_marginStart="20dp" />
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

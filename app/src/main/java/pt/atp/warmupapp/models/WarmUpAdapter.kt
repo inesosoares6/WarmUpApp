@@ -12,7 +12,7 @@ import pt.atp.warmupapp.R
 class WarmUpAdapter(private val context: Activity, private val name: Array<String>, private val type: Array<String>, private val time: Array<String>)
     : ArrayAdapter<String>(context, R.layout.layout_all_list, name) {
 
-    @SuppressLint("ViewHolder", "InflateParams")
+    @SuppressLint("ViewHolder", "InflateParams", "SetTextI18n")
     override fun getView(position: Int, view: View?, parent: ViewGroup): View {
         val inflater = context.layoutInflater
         val rowView = inflater.inflate(R.layout.layout_all_list, null, true)
@@ -25,7 +25,7 @@ class WarmUpAdapter(private val context: Activity, private val name: Array<Strin
         imageView.setImageResource(R.drawable.logo)
         nameText.text = name[position]
         typeText.text = type[position]
-        timeText.text = time[position]
+        timeText.text = time[position] + " min"
 
         return rowView
     }
