@@ -1,5 +1,6 @@
 package pt.atp.warmupapp.models
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.view.View
 import android.view.ViewGroup
@@ -11,6 +12,7 @@ import pt.atp.warmupapp.R
 class WarmUpAdapter(private val context: Activity, private val name: Array<String>, private val type: Array<String>, private val time: Array<String>)
     : ArrayAdapter<String>(context, R.layout.layout_all_list, name) {
 
+    @SuppressLint("ViewHolder", "InflateParams")
     override fun getView(position: Int, view: View?, parent: ViewGroup): View {
         val inflater = context.layoutInflater
         val rowView = inflater.inflate(R.layout.layout_all_list, null, true)

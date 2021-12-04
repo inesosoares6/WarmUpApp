@@ -4,10 +4,10 @@
     <string name="set_warm_up_max_time">Set warm up max time</string>
     <string name="welcome">Welcome</string>
     <string name="logo">logo</string>
-    <string name="warm_up_name">warm_up_name</string>
-    <string name="warm_up_type">warm_up_type</string>
-    <string name="warm_up_time">warm_up_time</string>
-    <string name="warm_up_exercises">warm_up_exercises</string>
+    <string name="warm_up_name">Name</string>
+    <string name="warm_up_type">Type</string>
+    <string name="warm_up_time">Time (min)</string>
+    <string name="warm_up_exercises">Exercises</string>
     <string name="log_out">Log Out</string>
     <string name="home">Home</string>
     <string name="warm_up">Warm Up</string>
@@ -33,4 +33,10 @@
     <string name="fail_email_recover">Failed to send reset email</string>
     <string name="error_name">Error in reading name</string>
     <string name="successSignOut">Sign out successful</string>
+    <string name="new_warm_up">new_warm_up</string>
+    <string name="warm_up_addition_successful">Warm Up added successfully</string>
+    <string name="error_adding_warm_up">Error adding Warm Up</string>
+    <string name="submit">Submit</string>
+    <string name="error_getting_numWarmUps">Error getting numWarmUps</string>
+    <string name="error_getting_documents">Error getting documents</string>
 </resources>

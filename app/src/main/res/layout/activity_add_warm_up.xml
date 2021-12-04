@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityAddWarmUp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:contentDescription="@string/logo"
+        android:layout_width="228dp"
+        android:layout_height="225dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="50dp"
+        app:srcCompat="@drawable/logo_3"
+        app:layout_constraintBottom_toTopOf="@+id/add_warm_up_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"/>
+
+    <EditText
+        android:id="@+id/add_warm_up_name"
+        android:inputType="text"
+        android:hint="@string/warm_up_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="30dp"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintBottom_toTopOf="@+id/add_warm_up_type"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/add_warm_up_type"
+        android:inputType="textEmailAddress"
+        android:hint="@string/warm_up_type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/add_warm_up_name"
+        app:layout_constraintBottom_toTopOf="@+id/add_warm_up_time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:autofillHints="" />
+
+
+    <EditText
+        android:id="@+id/add_warm_up_time"
+        android:hint="@string/warm_up_time"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:inputType="number"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/add_warm_up_type"
+        app:layout_constraintBottom_toTopOf="@+id/add_warm_up_exercises"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/add_warm_up_exercises"
+        android:hint="@string/warm_up_exercises"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/add_warm_up_time"
+        app:layout_constraintBottom_toTopOf="@+id/add_warm_up_submit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:autofillHints=""
+        tools:ignore="RtlCompat" />
+
+    <Button
+        android:id="@+id/add_warm_up_submit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
+        android:text="@string/submit"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_warm_up_exercises" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

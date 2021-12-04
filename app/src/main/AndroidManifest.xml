@@ -27,6 +27,11 @@
         <activity
             android:name=".ActivityRegister"
             android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ActivityAddWarmUp"
+            android:screenOrientation="portrait" />
+
         <activity
             android:name=".ActivityResetPassword"
             android:screenOrientation="portrait" />

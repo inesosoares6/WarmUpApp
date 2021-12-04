@@ -12,7 +12,6 @@ import com.google.firebase.firestore.FirebaseFirestore
 
 // Activity to register the user
 
-
 class ActivityRegister : AppCompatActivity() {
 
     private var nameTV: EditText? = null
@@ -35,11 +34,10 @@ class ActivityRegister : AppCompatActivity() {
     }
 
     private fun writeNewUserDatabase(name: String, email: String) {
-        // Create a new user with a first and last name
         val user = hashMapOf(
             "name" to name,
             "email" to email,
-            "numCharges" to 0
+            "numWarmUps" to 0
         )
 
         // Add a new document with a generated ID
