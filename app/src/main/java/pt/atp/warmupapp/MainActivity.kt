@@ -5,10 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.fragment.app.Fragment
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -36,10 +39,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val mAuth: FirebaseAuth?
+        mAuth=FirebaseAuth.getInstance()
         return when (item.itemId) {
             R.id.action_logout ->{
-                // val intent = Intent(applicationContext, LoginActivity::class.java)
-                // startActivity(intent)
+                mAuth.signOut()
+                Toast.makeText(applicationContext,getString(R.string.successSignOut), Toast.LENGTH_LONG).show()
+                val intent = Intent(applicationContext,ActivityLogin::class.java)
+                startActivity(intent)
                 return true
             }
             else -> super.onOptionsItemSelected(item)

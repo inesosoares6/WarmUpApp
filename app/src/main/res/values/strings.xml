@@ -31,4 +31,6 @@
     <string name="reset_password">Reset Password</string>
     <string name="sent_email_recover">We have sent you instructions to reset your password</string>
     <string name="fail_email_recover">Failed to send reset email</string>
+    <string name="error_name">Error in reading name</string>
+    <string name="successSignOut">Sign out successful</string>
 </resources>

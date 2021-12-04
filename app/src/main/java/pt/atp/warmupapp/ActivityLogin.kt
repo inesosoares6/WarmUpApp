@@ -32,7 +32,7 @@ class ActivityLogin : AppCompatActivity() {
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_login)
         setup()
     }
 
