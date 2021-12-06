@@ -19,14 +19,14 @@
     <string name="register">Register</string>
     <string name="failLogin">Login failed</string>
     <string name="successLogin">Login successful</string>
-    <string name="enterEmail">Enter password</string>
-    <string name="enterPassword">Enter Password</string>
+    <string name="enterEmail">Enter email</string>
+    <string name="enterPassword">Enter password</string>
     <string name="name">Name</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="failRegister">Register failed</string>
     <string name="successRegister">Register successful</string>
     <string name="enterName">Enter Name</string>
-    <string name="matchPassword">Passwords don not match</string>
+    <string name="matchPassword">Passwords do not match</string>
     <string name="password_reset_instructions">We just need your registered email to send you password reset instructions.</string>
     <string name="reset_password">Reset Password</string>
     <string name="sent_email_recover">We have sent you instructions to reset your password</string>
