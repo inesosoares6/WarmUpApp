@@ -21,9 +21,7 @@ class FragmentWarmUp : Fragment(R.layout.fragment_warmup) {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         val rootView: View = inflater.inflate(R.layout.fragment_warmup,container,false)
-        val nameText: TextView = rootView.findViewById(R.id.warm_up_name)
-        val typeText: TextView = rootView.findViewById(R.id.warm_up_type)
-        val timeText: TextView = rootView.findViewById(R.id.warm_up_time)
+        val headText: TextView = rootView.findViewById(R.id.warm_up_head)
         val exercisesText: TextView = rootView.findViewById(R.id.warm_up_exercises)
         mAuth= FirebaseAuth.getInstance()
 
@@ -31,9 +29,7 @@ class FragmentWarmUp : Fragment(R.layout.fragment_warmup) {
             db.collection("users").document(it).collection("default").document("warm-up").get()
                     .addOnSuccessListener { result ->
                         if(result["name"]!=null){
-                            nameText.text = result["name"].toString()
-                            typeText.text = result["type"].toString()
-                            timeText.text = result["time"].toString()+" min"
+                            headText.text = result["name"].toString() + " - " + result["type"].toString() + " - " + result["time"].toString()+" min"
                             exercisesText.text = result["exercises"].toString()
                         }
                     }

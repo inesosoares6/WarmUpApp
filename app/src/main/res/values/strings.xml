@@ -45,4 +45,5 @@
     <string name="cancelElimination">Cancel</string>
     <string name="warm_up_deleted_successful">Warm Up deleted successfully</string>
     <string name="add_new_warm_up">Warm Up list is empty. Add new warm-up.</string>
+    <string name="head">HEAD</string>
 </resources>
