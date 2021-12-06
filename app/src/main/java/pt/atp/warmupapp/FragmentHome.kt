@@ -1,8 +1,6 @@
 package pt.atp.warmupapp
 
-import android.content.Intent
 import android.os.Bundle
-import android.text.Editable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,6 +12,7 @@ import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlin.random.Random
+import kotlin.Float
 
 class FragmentHome : Fragment(R.layout.fragment_home) {
 
@@ -60,7 +59,12 @@ class FragmentHome : Fragment(R.layout.fragment_home) {
                                     Toast.makeText(context,getString(R.string.add_new_warm_up), Toast.LENGTH_LONG).show()
                                 }
                                 else -> {
-                                    generateWarmUp(setTime.text.toString().toInt())
+                                    if(setTime.text.toString() != ""){
+                                        generateWarmUp(setTime.text.toString().toInt())
+                                    }
+                                    else{
+                                        generateWarmUp(1000)
+                                    }
                                 }
                             }
                         }
