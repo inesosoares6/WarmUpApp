@@ -16,10 +16,10 @@
         android:layout_marginTop="60dp"
         android:layout_marginStart="50dp"
         android:layout_marginBottom="10dp"
-        app:srcCompat="@drawable/logo_3_white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:src="?attr/groupIndicatorIcon"
         app:layout_constraintVertical_bias="1.0"/>
 
     <TextView
