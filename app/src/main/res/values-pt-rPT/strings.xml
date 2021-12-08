@@ -46,4 +46,13 @@
     <string name="warm_up_deleted_successful">Warm Up eliminado com sucesso</string>
     <string name="add_new_warm_up">Lista de Warm Ups vazia. Adicionar novo warm-up.</string>
     <string name="head">HEAD</string>
+    <string name="settings">Definições</string>
+    <string name="delete_account">Eliminar conta</string>
+    <string name="are_you_sure_that_you_want_to_delete_your_account">Tem a certeza que pretende eliminar esta conta?</string>
+    <string name="no_return_to_homepage">Não, volta à página principal.</string>
+    <string name="yes_delete_account">Sim, eliminar conta.</string>
+    <string name="userDeleted">Conta eliminada</string>
+    <string name="account">Conta</string>
+    <string name="change_username">Alterar nome do utilizador</string>
+    <string name="reset_password_settings">Alterar palavra-passe</string>
 </resources>

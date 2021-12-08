@@ -1,0 +1,31 @@
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:title="@string/account">
+
+        <EditTextPreference
+            app:key="username"
+            app:title="@string/change_username" />
+
+        <Preference
+            app:title="@string/reset_password_settings">
+            <intent
+                android:action="pt.atp.warmupapp.SETTING_START_ACTIVITY"
+                android:targetClass="pt.atp.warmupapp.ActivityResetPassword"
+                android:targetPackage="pt.atp.warmupapp" />
+        </Preference>
+
+        <Preference
+            app:title="@string/delete_account">
+            <intent
+                android:action="pt.atp.warmupapp.SETTING_START_ACTIVITY"
+                android:targetClass="pt.atp.warmupapp.ActivityDeleteUser"
+                android:targetPackage="pt.atp.warmupapp" />
+        </Preference>
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>
