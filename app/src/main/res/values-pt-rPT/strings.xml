@@ -39,7 +39,7 @@
     <string name="submit">Submeter</string>
     <string name="error_getting_numWarmUps">Erro a aceder a numWarmUps</string>
     <string name="error_getting_documents">Erro a aceder a documents</string>
-    <string name="performAction">Que ação pretende efetuar com este veículo?</string>
+    <string name="performAction">Que ação pretende efetuar com este Warm Up?</string>
     <string name="favorite">Predefinir como favorito</string>
     <string name="deleteFromList">Eliminar da lista</string>
     <string name="cancelElimination">Cancelar</string>
