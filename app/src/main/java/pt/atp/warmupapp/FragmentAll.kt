@@ -46,22 +46,8 @@ class FragmentAll : Fragment(R.layout.fragment_all) {
 
         mAuth!!.currentUser?.email?.let {
             db.collection("users").document(it).collection("warm-ups").get()
-                    .addOnSuccessListener { result ->
-                        for(document in result){
-                            arrayDocs.add(document.id)
-                            arrayName.add(document["name"].toString())
-                            arrayType.add(document["type"].toString())
-                            arrayTime.add(document["time"].toString())
-                            arrayExercises.add(document["exercises"].toString())
-                        }
-                        when (arrayDocs.size) {
-                            0 -> {
-                                Toast.makeText(context,getString(R.string.add_new_warm_up), Toast.LENGTH_LONG).show()
-                            }
-                            else -> {
-                                sendData(rootView, arrayName, arrayType, arrayTime)
-                            }
-                        }
+                    .addOnSuccessListener {
+                        getList(rootView)
                     }
                     .addOnFailureListener {
                         Toast.makeText(context,getString(R.string.error_getting_documents), Toast.LENGTH_LONG).show()
@@ -90,30 +76,63 @@ class FragmentAll : Fragment(R.layout.fragment_all) {
             val itemIdAtPos = adapterView.getItemIdAtPosition(position)
 
             val dialogBuilder = AlertDialog.Builder(context as Activity)
-            dialogBuilder.setMessage(getString(R.string.performAction))
+            dialogBuilder
                     .setCancelable(false)
                     .setPositiveButton(getString(R.string.favorite)) { _, _ ->
                         setAsFavorite(itemIdAtPos.toInt())
                     }
                     .setNegativeButton(getString(R.string.deleteFromList)) { _, _ ->
-                        deleteFromList(itemIdAtPos.toInt())
+                        deleteFromList(rootView, itemIdAtPos.toInt())
                     }
                     .setNeutralButton(getString(R.string.cancelElimination)) { dialog, _ ->
                         dialog.cancel()
                     }
             val alert = dialogBuilder.create()
-            alert.setTitle(getString(R.string.warm_up) + " #" + (itemIdAtPos+1))
+            alert.setTitle(getString(R.string.warm_up) + " - " + arrayName[itemIdAtPos.toInt()])
             alert.show()
         }
     }
 
-    private fun deleteFromList(idList: Int) {
+    private fun deleteFromList(rootView: View, idList: Int) {
         mAuth?.currentUser?.email?.let {
             db.collection("users").document(it).collection("warm-ups").document(arrayDocs[idList]).delete()
             Toast.makeText(context, getString(R.string.warm_up_deleted_successful), Toast.LENGTH_LONG).show()
         }
         mAuth?.currentUser?.email?.let {
             db.collection("users").document(it).update(mapOf("numWarmUps" to (numWarmUps-1)))
+        }
+        getList(rootView)
+    }
+
+    private fun getList(rootView: View){
+        arrayDocs.clear()
+        arrayName.clear()
+        arrayType.clear()
+        arrayTime.clear()
+        arrayExercises.clear()
+
+        mAuth!!.currentUser?.email?.let {
+            db.collection("users").document(it).collection("warm-ups").get()
+                    .addOnSuccessListener { result ->
+                        for(document in result){
+                            arrayDocs.add(document.id)
+                            arrayName.add(document["name"].toString())
+                            arrayType.add(document["type"].toString())
+                            arrayTime.add(document["time"].toString())
+                            arrayExercises.add(document["exercises"].toString())
+                        }
+                        when (arrayDocs.size) {
+                            0 -> {
+                                Toast.makeText(context,getString(R.string.add_new_warm_up), Toast.LENGTH_LONG).show()
+                            }
+                            else -> {
+                                sendData(rootView, arrayName, arrayType, arrayTime)
+                            }
+                        }
+                    }
+                    .addOnFailureListener {
+                        Toast.makeText(context,getString(R.string.error_getting_documents), Toast.LENGTH_LONG).show()
+                    }
         }
     }
 

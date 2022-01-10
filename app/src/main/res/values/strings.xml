@@ -38,9 +38,9 @@
     <string name="submit">Submit</string>
     <string name="error_getting_numWarmUps">Error getting numWarmUps</string>
     <string name="error_getting_documents">Error getting documents</string>
-    <string name="performAction">What action do you want to perform with this Warm Up?</string>
-    <string name="favorite">Predefine as favorite</string>
-    <string name="deleteFromList">Delete from list</string>
+    <string name="performAction">Choose option:</string>
+    <string name="favorite">Select Warm Up</string>
+    <string name="deleteFromList">Delete</string>
     <string name="cancelElimination">Cancel</string>
     <string name="warm_up_deleted_successful">Warm Up deleted successfully</string>
     <string name="add_new_warm_up">Warm Up list is empty. Add new warm-up.</string>
