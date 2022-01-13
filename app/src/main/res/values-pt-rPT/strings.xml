@@ -40,7 +40,7 @@
     <string name="error_getting_numWarmUps">Erro a aceder a numWarmUps</string>
     <string name="error_getting_documents">Erro a aceder a documents</string>
     <string name="performAction">Selecionar opção:</string>
-    <string name="favorite">Selecionar Warm Up</string>
+    <string name="favorite">Selecionar</string>
     <string name="deleteFromList">Eliminar</string>
     <string name="cancelElimination">Cancelar</string>
     <string name="warm_up_deleted_successful">Warm Up eliminado com sucesso</string>

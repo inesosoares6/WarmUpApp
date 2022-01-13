@@ -39,7 +39,7 @@
     <string name="error_getting_numWarmUps">Error getting numWarmUps</string>
     <string name="error_getting_documents">Error getting documents</string>
     <string name="performAction">Choose option:</string>
-    <string name="favorite">Select Warm Up</string>
+    <string name="favorite">Select</string>
     <string name="deleteFromList">Delete</string>
     <string name="cancelElimination">Cancel</string>
     <string name="warm_up_deleted_successful">Warm Up deleted successfully</string>
