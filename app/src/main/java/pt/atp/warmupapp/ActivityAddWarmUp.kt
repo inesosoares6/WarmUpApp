@@ -49,8 +49,16 @@ class ActivityAddWarmUp : AppCompatActivity() {
                 "time" to time,
                 "exercises" to exercises
         )
+        // add zeros before the numWarmUps so that the documents stay in order
+        val docName: String = if((numWarmUps+1)<10){
+            "00"+(numWarmUps+1).toString()
+        } else if ((numWarmUps+1)>9 && (numWarmUps+1)<100){
+            "0"+(numWarmUps+1).toString()
+        } else{
+            (numWarmUps+1).toString()
+        }
         mAuth?.currentUser?.email?.let { it1 ->
-            db.collection("users").document(it1).collection("warm-ups").document((numWarmUps+1).toString()).set(warmUp)
+            db.collection("users").document(it1).collection("warm-ups").document(docName).set(warmUp)
                     .addOnSuccessListener {
                         Toast.makeText(applicationContext, getString(R.string.warm_up_addition_successful), Toast.LENGTH_LONG).show()
                         updateNumWarmUps()
